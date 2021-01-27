@@ -98,7 +98,7 @@ func copyCSVRows(i *Import, reader *csv.Reader, ignoreErrors bool,
 		//Loop ensures we don't insert too many values and that
 		//values are properly converted into empty interfaces
 		for i, col := range record {
-			cols[i] = strings.Replace(col, "\x00", "", -1)
+			cols[idx] = strings.Replace(col, "\x00", "", -1)
 			// bytes.Trim(b, "\x00")
 			// cols[i] = col
 		}
